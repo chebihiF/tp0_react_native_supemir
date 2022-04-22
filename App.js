@@ -70,36 +70,30 @@ export default function App() {
         flexDirection: "row",
         justifyContent: "center", //main axis
         alignItems:"center", //secondary axis
-        alignContent:"center",
-        flexWrap: "wrap",
+        //alignContent:"center",
+        //flexWrap: "wrap",
         paddingTop: Platform.OS == 'android' ? StatusBar.currentHeight : 0
       }}>
         
         <View style={{
           backgroundColor: 'dodgerblue',
-          width: 100,
-          height : 300,
+          //flexBasis: 100, // width, height
+          //flexGrow: 1,
+          width: 400,
+          flexShrink:1,
+          height : 100,
         }}></View>
         <View style={{
           backgroundColor: 'gold',
           width: 100,
-          height : 200
+          height : 100
         }}></View>
         <View style={{
           backgroundColor: 'tomato',
           width: 100,
           height : 100
         }}></View>
-        <View style={{
-          backgroundColor: 'grey',
-          width: 100,
-          height : 100
-        }}></View>
-        <View style={{
-          backgroundColor: 'greenyellow',
-          width: 100,
-          height : 100
-        }}></View>
+
 
       </View>
   );
