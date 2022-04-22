@@ -79,14 +79,17 @@ export default function App() {
           backgroundColor: 'dodgerblue',
           //flexBasis: 100, // width, height
           //flexGrow: 1,
-          width: 400,
-          flexShrink:1,
+          width: 100,
+          //flexShrink:1,
           height : 100,
         }}></View>
         <View style={{
           backgroundColor: 'gold',
           width: 100,
-          height : 100
+          height : 100,
+          left: 20,
+          top: 20,
+          position: "absolute"
         }}></View>
         <View style={{
           backgroundColor: 'tomato',
