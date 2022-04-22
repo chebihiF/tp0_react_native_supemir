@@ -19,19 +19,15 @@ import {
 
 export default function App() {
 
-  const {landscape} = useDeviceOrientation();
-  //console.log(useDeviceOrientation());
-
-  return (
-    <SafeAreaView style={[styles.container]}>    
+  /*   
+      <SafeAreaView style={[styles.container]}>
       <View style={{
           backgroundColor: 'dodgerblue', 
           width:'100%', 
           height:landscape ? '100%' : '30%'
           }}>
       </View>
-
-      {/*       
+      
       <Image style={styles.imageStyle} source={require("./assets/favicon.png")} />
         
       <TouchableOpacity 
@@ -61,11 +57,42 @@ export default function App() {
           {text: 'Yes', onPress: () => console.log("Yes")},
           {text: 'No', onPress: ()=>console.log("No")},
         ])} />
+        </SafeAreaView>
+      */
+  const {landscape} = useDeviceOrientation();
+  //console.log(useDeviceOrientation());
 
-      */}
-   
-    </SafeAreaView>
+  return (
+        
+      <View style={{
+        backgroundColor:'#fff',
+        flex: 1,
+        flexDirection: "row",
+        justifyContent: "center", //main axis
+        alignItems:"center", //secondary axis
+        paddingTop: Platform.OS == 'android' ? StatusBar.currentHeight : 0
+      }}>
+        
+        <View style={{
+          backgroundColor: 'dodgerblue',
+          width: 100,
+          height : 300,
+          alignSelf: "flex-start"
+        }}></View>
+        <View style={{
+          backgroundColor: 'gold',
+          width: 100,
+          height : 200
+        }}></View>
+        <View style={{
+          backgroundColor: 'tomato',
+          width: 100,
+          height : 100
+        }}></View>
+
+      </View>
   );
+      
 }
 
 const containerStyle = {backghgroundColor: 'orange'}
